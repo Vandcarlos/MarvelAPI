@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MarvelAPI_Example' do
+  pod 'MarvelAPI', :path => '../'
+
+  target 'MarvelAPI_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
