@@ -10,7 +10,10 @@ import UIKit
 
 class MainViewController: UITableViewController {
 
-    var modules: [ModuleItem] = []
+    var modules: [ModuleItem] = [
+        CharactersViewController()
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseIdentifier)

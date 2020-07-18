@@ -26,6 +26,8 @@ Pod::Spec.new do |s|
   s.author           = { 'vandcarlosjunior@gmail.com' => 'vandcarlosjunior@gmail.com' }
   s.source           = { :git => 'https://github.com/vandcarlosjunior@gmail.com/MarvelAPI.git', :tag => s.version.to_s }
 
-
   s.source_files = 'MarvelAPI/Classes/**/*'
+
+  s.dependency 'SwiftHash', '~> 2.0.2'
+
 end

@@ -10,6 +10,8 @@
 		8E11D0C49869F69C4C027D52 /* Pods_MarvelAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5D2D093B93D6508F9A4904 /* Pods_MarvelAPI_Example.framework */; };
 		A008E02324C28668008C8897 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A008E01F24C28668008C8897 /* Images.xcassets */; };
 		A008E02424C28668008C8897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E02024C28668008C8897 /* AppDelegate.swift */; };
+		A008E02924C2890F008C8897 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E02824C2890F008C8897 /* CharactersViewController.swift */; };
+		A008E02D24C2895B008C8897 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E02C24C2895B008C8897 /* ApiKeys.swift */; };
 		A02029ED24C261A100D440D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02029EA24C261A100D440D7 /* MainViewController.swift */; };
 		A02029EE24C261A100D440D7 /* ModuleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02029EB24C261A100D440D7 /* ModuleItem.swift */; };
 		A02029EF24C261A100D440D7 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02029EC24C261A100D440D7 /* MainTableViewCell.swift */; };
@@ -38,6 +40,8 @@
 		A008E01F24C28668008C8897 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A008E02024C28668008C8897 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A008E02124C28668008C8897 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A008E02824C2890F008C8897 /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		A008E02C24C2895B008C8897 /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		A02029EA24C261A100D440D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A02029EB24C261A100D440D7 /* ModuleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleItem.swift; sourceTree = "<group>"; };
 		A02029EC24C261A100D440D7 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,8 +96,9 @@
 		607FACD21AFB9204008FA782 /* Example for MarvelAPI */ = {
 			isa = PBXGroup;
 			children = (
-				A008E01C24C28668008C8897 /* Supporting Files */,
+				A008E02624C2890F008C8897 /* Modules */,
 				A02029E924C261A100D440D7 /* Main */,
+				A008E01C24C28668008C8897 /* Supporting Files */,
 			);
 			name = "Example for MarvelAPI";
 			path = MarvelAPI;
@@ -148,12 +153,29 @@
 		A008E01C24C28668008C8897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A008E02C24C2895B008C8897 /* ApiKeys.swift */,
 				A008E01D24C28668008C8897 /* LaunchScreen.xib */,
 				A008E01F24C28668008C8897 /* Images.xcassets */,
 				A008E02024C28668008C8897 /* AppDelegate.swift */,
 				A008E02124C28668008C8897 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A008E02624C2890F008C8897 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A008E02724C2890F008C8897 /* Characters */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A008E02724C2890F008C8897 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				A008E02824C2890F008C8897 /* CharactersViewController.swift */,
+			);
+			path = Characters;
 			sourceTree = "<group>";
 		};
 		A02029E924C261A100D440D7 /* Main */ = {
@@ -337,10 +359,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MarvelAPI_Example/Pods-MarvelAPI_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MarvelAPI/MarvelAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarvelAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,7 +380,9 @@
 			files = (
 				A008E02424C28668008C8897 /* AppDelegate.swift in Sources */,
 				A02029EE24C261A100D440D7 /* ModuleItem.swift in Sources */,
+				A008E02D24C2895B008C8897 /* ApiKeys.swift in Sources */,
 				A02029ED24C261A100D440D7 /* MainViewController.swift in Sources */,
+				A008E02924C2890F008C8897 /* CharactersViewController.swift in Sources */,
 				A02029EF24C261A100D440D7 /* MainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
