@@ -17,7 +17,5 @@ jobs:
         working-directory: ./Example
       - name: SwiftLint
         run: exec ./.github/scripts/swiftlint.sh
-        working-directory: ./Example
       - name: Testing iOS app
         run: exec ./.github/scripts/test.sh
-        working-directory: ./Example
