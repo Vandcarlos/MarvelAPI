@@ -22,7 +22,7 @@ pod 'MarvelAPI'
 
 ## Author
 
-vandcarlosjunior@gmail.com, vandcarlosjunior@gmail.com
+Vandcarlos, vandcarlosjunior@gmail.com
 
 ## License
 
