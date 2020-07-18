@@ -7,8 +7,6 @@ jobs:
   test:
     name: Testing Swift Package and iOS app
     runs-on: macOS-latest
-    env:
-      working-directory: ./Example
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
@@ -16,7 +14,10 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_11.5.app
       - name: Install pods
         run: Pod install
+        working-directory: ./Example
       - name: SwiftLint
         run: exec ./.github/scripts/swiftlint.sh
+        working-directory: ./Example
       - name: Testing iOS app
         run: exec ./.github/scripts/test.sh
+        working-directory: ./Example
