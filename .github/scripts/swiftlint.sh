@@ -1,4 +1,4 @@
 
 set -eo pipefail
 
-Example/Pods/SwiftLint/swiftlint --strict
+Pods/SwiftLint/swiftlint --strict
