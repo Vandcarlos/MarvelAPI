@@ -12,6 +12,7 @@
 		A008E02424C28668008C8897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E02024C28668008C8897 /* AppDelegate.swift */; };
 		A008E02924C2890F008C8897 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E02824C2890F008C8897 /* CharactersViewController.swift */; };
 		A008E02D24C2895B008C8897 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E02C24C2895B008C8897 /* ApiKeys.swift */; };
+		A008E03224C29104008C8897 /* CharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008E03124C29104008C8897 /* CharactersTests.swift */; };
 		A02029ED24C261A100D440D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02029EA24C261A100D440D7 /* MainViewController.swift */; };
 		A02029EE24C261A100D440D7 /* ModuleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02029EB24C261A100D440D7 /* ModuleItem.swift */; };
 		A02029EF24C261A100D440D7 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02029EC24C261A100D440D7 /* MainTableViewCell.swift */; };
@@ -42,6 +43,7 @@
 		A008E02124C28668008C8897 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A008E02824C2890F008C8897 /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		A008E02C24C2895B008C8897 /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		A008E03124C29104008C8897 /* CharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTests.swift; sourceTree = "<group>"; };
 		A02029EA24C261A100D440D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A02029EB24C261A100D440D7 /* ModuleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleItem.swift; sourceTree = "<group>"; };
 		A02029EC24C261A100D440D7 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				A008E03124C29104008C8897 /* CharactersTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1160;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A008E03224C29104008C8897 /* CharactersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E758C683EF4DF7F08F25603 /* Pods-MarvelAPI_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -569,6 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelAPI_Example.app/MarvelAPI_Example";
@@ -579,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 646CBFA0F3A747B90263843F /* Pods-MarvelAPI_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
